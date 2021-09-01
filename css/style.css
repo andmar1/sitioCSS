@@ -1,0 +1,84 @@
+/* pseudoselectores "::" no existen en condigo html*/
+
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+
+}
+
+/* agregando los siguientes dos selectores el sitio web se adapta mejor a los navegadores */
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;  /*1rem == 10px*/
+    font-family: 'Krub', sans-serif;
+    
+}
+
+/* styles  */
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.contenedor{
+    /* max-width nos permite adaptar elementos al momento de hacer scroll hacia los lados */
+    max-width: 120rem;   /*1200 px como maximo*/
+    /* css detecta 0 arriba 0 abajo derecha e izquierda auto */
+    margin: 0 auto; 
+
+    /* centrado por cuadrantes */
+    /* margin-top:0;   */
+    /* margin-right: auto; */
+    /* margin-bottom: 0; */
+    /* margin-left: auto; */
+    /* -----------------------centrado una sola linea -> arriba, derecha, abajo, izquierda-----------*/
+    /* margin: 0 auto 0 auto; -> arriba, derecha, abajo, izquierda */
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    /*margin: 10rem; ----->Separacion*/
+    display: flex;
+    /* Centar elementos por medio de colum*/ 
+    flex-direction: column; 
+    /* align-items: center;  */
+    justify-content: space-between; /*mover contenido*/ 
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction:row;
+    }
+}
+
+/* nav */
+.navegacion-principal a{
+    /* display: block; -->uno debajo del otro    */
+    color: var(--blanco);
+    text-decoration:none; /*quitar linea vinculo*/
+    font-size: 2rem;
+    /* negritas */
+    font-weight:bold;
+    padding: 1rem; /*Relleno*/
+
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+
+
+
