@@ -14,7 +14,16 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;  /*box model, hack que nos permite que las dimensiones de los elementos no sean modificadas*/
+    scroll-snap-type:y mandatory;  /*Scroll de arriba hacia y vertical, x horizontal*/
 }
+/* scroll snap */
+.servicios, 
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
 
 /* selector universal, a todos los elementos les aplica el box sizing */
 *, *:before, *:after{
@@ -286,7 +295,6 @@ h1,h2,h3{
     height:20rem;
 
 }
-
 
 .input-text{
     /* tome todo el espacio disponible en contenedor */
